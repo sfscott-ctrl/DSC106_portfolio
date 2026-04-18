@@ -2,7 +2,9 @@ body {
   font: 100%/1.5 "Helvetica", sans-serif;
   max-width: 100ch;
   margin-inline: auto;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
+  padding-top: 3rem;
+  position: relative;
 }
 
 h1 {
@@ -12,17 +14,33 @@ h1 {
 
 p {
   margin-top: 0;
-} 
+}
 
 img {
-    max-width: 400px;
-    height: auto;
-  }
+  max-width: 400px;
+  height: auto;
+}
 
+:root {
+  --color-accent: oklch(75.704% 0.14089 355.338);
+}
+
+html {
+  accent-color: var(--color-accent);
+  color-scheme: light dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* NAV */
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   margin-bottom: 1rem;
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -39,20 +57,13 @@ nav a.current {
   padding-bottom: 0.1em;
 }
 
-:root {
-  --color-accent: oklch(75.704% 0.14089 355.338);
-}
-
-html {
-  accent-color: var(--color-accent);
-}
-
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
-  background-color: oklch(from var(--color-accent) 95% 5% h)
+  background-color: color-mix(in oklch, var(--color-accent), canvas 70%);
 }
 
+/* FORMS */
 form {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -69,6 +80,14 @@ button {
   grid-column: 1 / -1;
 }
 
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+/* PROJECTS */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
@@ -86,16 +105,19 @@ button {
   margin: 0;
 }
 
-h1 {
-  font-size: 400%;
+/* THEME SWITCHER */
+.color-scheme {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 80%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.1;
-  text-wrap: balance;
+.color-scheme select {
+  font: inherit;
 }
 
-/* CV PAGE */
+/* RESUME PAGE */
 .resume-page {
   display: grid;
   grid-template-columns: 18rem 1fr;
@@ -108,8 +130,9 @@ h1, h2, h3, h4, h5, h6 {
   top: 1rem;
   padding: 1.25rem;
   border-radius: 1rem;
-  background: oklch(from var(--color-accent) 97% 0.02 h);
-  border: 1px solid oklch(85% 0.03 220);
+  background: color-mix(in oklch, var(--color-accent), canvas 92%);
+  border: 1px solid color-mix(in oklch, canvastext, canvas 85%);
+  color: canvastext;
 }
 
 .resume-sidebar h1 {
@@ -121,16 +144,22 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.25rem 0;
 }
 
+.resume-sidebar a {
+  color: var(--color-accent);
+}
+
 .resume-main {
   display: grid;
   gap: 1rem;
+  color: canvastext;
 }
 
 .resume-section {
   padding: 1rem 1.25rem;
-  border: 1px solid oklch(88% 0.02 220);
+  border: 1px solid color-mix(in oklch, canvastext, canvas 85%);
   border-radius: 1rem;
-  background: white;
+  background: canvas;
+  color: canvastext;
   box-shadow: 0 0.4rem 1rem rgb(0 0 0 / 0.05);
 }
 
@@ -138,7 +167,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.75rem 0;
   font-size: 1.2rem;
   color: var(--color-accent);
-  border-bottom: 2px solid oklch(from var(--color-accent) 85% 0.05 h);
+  border-bottom: 2px solid color-mix(in oklch, var(--color-accent), canvas 55%);
   padding-bottom: 0.3rem;
 }
 
@@ -147,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 1fr auto;
   gap: 0.25rem 1rem;
   padding: 0.75rem 0;
-  border-bottom: 1px solid oklch(92% 0.01 220);
+  border-bottom: 1px solid color-mix(in oklch, canvastext, canvas 90%);
 }
 
 .resume-item:last-child {
@@ -161,12 +190,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .resume-item .date {
   font-size: 0.9rem;
-  color: #666;
+  color: color-mix(in oklch, canvastext, canvas 35%);
   white-space: nowrap;
 }
 
 .resume-item .org {
-  color: #444;
+  color: color-mix(in oklch, canvastext, canvas 20%);
   font-weight: 600;
 }
 
@@ -190,22 +219,65 @@ h1, h2, h3, h4, h5, h6 {
 
 .skills-list li {
   padding: 0.1rem 1rem;
-  margin-top: 0.5rem; 
+  margin-top: 0.5rem;
   border-radius: 999px;
-  background: oklch(from var(--color-accent) 92% 0.06 h);
+  background: color-mix(in oklch, var(--color-accent), canvas 75%);
+  color: canvastext;
   font-size: 0.9rem;
 }
 
-.resume-section a {
+.resume-section a,
+.resume-sidebar a {
   color: var(--color-accent);
   text-decoration-thickness: 2px;
   text-underline-offset: 0.15em;
 }
 
-.resume-section a:hover {
-  background: oklch(from var(--color-accent) 95% 0.05 h);
+.resume-section a:hover,
+.resume-sidebar a:hover {
+  background: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
+/* MANUAL DARK MODE OVERRIDES */
+html[style*="color-scheme: dark"] .resume-sidebar {
+  background: color-mix(in oklch, var(--color-accent), canvas 85%);
+  border: 1px solid color-mix(in oklch, canvastext, canvas 75%);
+  color: canvastext;
+}
+
+html[style*="color-scheme: dark"] .resume-section {
+  background: color-mix(in oklch, canvas 92%, white 8%);
+  border: 1px solid color-mix(in oklch, canvastext, canvas 75%);
+  box-shadow: none;
+  color: canvastext;
+}
+
+html[style*="color-scheme: dark"] .resume-section h2 {
+  color: var(--color-accent);
+  border-bottom: 2px solid color-mix(in oklch, var(--color-accent), canvas 55%);
+}
+
+html[style*="color-scheme: dark"] .resume-item {
+  border-bottom: 1px solid color-mix(in oklch, canvastext, canvas 80%);
+}
+
+html[style*="color-scheme: dark"] .resume-item .org,
+html[style*="color-scheme: dark"] .resume-item .date,
+html[style*="color-scheme: dark"] .resume-sidebar p {
+  color: canvastext;
+}
+
+html[style*="color-scheme: dark"] .skills-list li {
+  background: color-mix(in oklch, var(--color-accent), canvas 75%);
+  color: canvastext;
+}
+
+html[style*="color-scheme: dark"] .resume-section a,
+html[style*="color-scheme: dark"] .resume-sidebar a {
+  color: var(--color-accent);
+}
+
+/* RESPONSIVE */
 @media (max-width: 700px) {
   .resume-page {
     grid-template-columns: 1fr;
@@ -221,5 +293,14 @@ h1, h2, h3, h4, h5, h6 {
 
   .resume-item .date {
     white-space: normal;
+  }
+
+  .color-scheme {
+    position: static;
+    margin-bottom: 1rem;
+  }
+
+  body {
+    padding-top: 1rem;
   }
 }
