@@ -15,7 +15,7 @@ let pages = [
 const BASE_PATH =
   location.hostname === "localhost" || location.hostname === "127.0.0.1"
     ? "/"
-    : "/DSC106_PORTFOLIO/"; // change if your repo name is different
+    : "/DSC106_portfolio/"; 
 
 document.body.insertAdjacentHTML(
   "afterbegin",
