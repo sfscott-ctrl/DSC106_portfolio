@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Song Recommender System",
+    "image": "../images/project1.png",
+    "description": "A system that recommends songs based on user preferences from given artist discography.",
+    "year": 2023
+  },
+  {
+    "title": "TV Show Data Analysis",
+    "image": "../images/project2.png",
+    "description": "Extract insights and create visualizations from TV show data.",
+    "year": 2023
+  },
+  {
+    "title": "Grade Analysis and Calculation",
+    "image": "../images/project3.png",
+    "description": "Analyzed student grade data using Python to compute assignment categories, apply lateness penalties, and calculate final course grades with redemption adjustments.",
+    "year": 2024
+  },
+  {
+    "title": "Loan Data Analysis",
+    "image": "../images/project4.png",
+    "description": "Cleaned and analyzed loan datasets to study relationships between credit scores, interest rates, and financial factors using statistical tests and visualizations..",
+    "year": 2024
+  },
+  {
+    "title": "Language Modeling with N-grams",
+    "image": "../images/project5.png",
+    "description": "Built probabilistic language models (unigram and n-gram) to analyze and generate text from large documents using tokenization and sequence modeling.",
+    "year": 2024
+  },
+  {
+    "title": "League of Legends Exploration Website",
+    "image": "../images/project6.png",
+    "description": "Explored gameplay and player statistics to identify patterns in performance and strategy within League of Legends.",
+    "year": 2024
+  },
+  {
+    "title": "SoCal Image Classification Model",
+    "image": "../images/project7.png",
+    "description": "ResNet-18–based image classification model to identify cities from street-view images, achieving improved performance over a human baseline.",
+    "year": 2025
+  },
+  {
+    "title": "Algorithmic Complexity vs. Hardware Reality",
+    "image": "../images/project8.png",
+    "description": "Explored optimization techniques between theoretical algorithmic complexity and practical hardware performance.",
+    "year": 2025
+  },
+  {
+    "title": "Clash Royale Data Exploration",
+    "image": "../images/project9.png",
+    "description": "Performed data analysis to find optimal elixir cost with highest win rates.",
+    "year": 2025
+  },
+  {
+    "title": "Image Classification System",
+    "image": "../images/project10.png",
+    "description": "Multimedia processing system that performs image transformations, audio effects, and KNN-based image classification using custom data structures and algorithms.",
+    "year": 2024
+  },
+  {
+    "title": "Food Processing and Price Analysis",
+    "image": "../images/project11.png",
+    "description": "Designed an expository data visualization to communicate how food processing levels relate to price and nutrition using real-world grocery data.",
+    "year": 2026
+  },
+  {
+    "title": "Persuasive vs. Deceptive Data Visualization",
+    "image": "../images/project12.png",
+    "description": "Created contrasting visualizations of the same dataset to demonstrate how design choices can influence interpretation and shape conclusions.",
+    "year": 2026
+  }
+
+]
+
