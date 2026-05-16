@@ -70,6 +70,13 @@
     "image": "../images/project12.png",
     "description": "Created contrasting visualizations of the same dataset to demonstrate how design choices can influence interpretation and shape conclusions.",
     "year": 2026
+  },
+
+  {
+    "title": "Bluebikes Traffic Flow Visualization",
+    "image": "../images/bikewatching.png",
+    "description": "Interactive geospatial visualization analyzing Bluebikes traffic patterns across the Boston and Cambridge area. Features dynamic station traffic scaling, time-based trip filtering, and color-encoded arrival/departure flow patterns using Mapbox and D3.",
+    "year": 2026
   }
 
 ]
